@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- SOEN287 Assignment 2 -->
+<!-- Question3.html       -->
+<!-- Mei Liu 40060940     -->
+
+<html lang="en">
+
+<head>
+
+<title>SOEN287 Assignment 2 Question 3</title> 
+
+<meta charset="utf-8"/>
+
+<link rel="stylesheet" type="text/css" href="Question3.css" />
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script type="text/javascript" src="Question3.js" ></script>
+
+</head>
+
+<body> 
+
+<form onsubmit="parseInputData()">
+<table>
+
+<tr>
+<td>Input String:</td><td><input id="instring" type="text"/></td>
+</tr>
+<tr>
+<td>Input Word:</td><td><input id="inword" type="text"/></td>
+</tr>
+<tr><td colspan="2">
+<input id="plot" type="button" onclick="parseInputData()" value="Plot Histogram"/>
+</td></tr>
+
+</table>
+</form>
+
+<div id="graph"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+table
+{
+	font-size: 24px;
+	border-collapse:collapse; 
+    border-spacing:0;
+}
+
+table tr:nth-child(2n+1){  
+    background-color:#FFC300;  
+}  
+table tr:nth-child(2n){  
+    background-color:white;  
+}  
+
+td {
+    border:3px solid black; 
+    padding: 10px;
+}
+
+input#instring{
+    font-size: 24px;
+    width: 600px;
+}
+
+input#inword{
+    font-size: 24px;
+    width: 600px;
+}
+
+input#plot 
+{
+	font-size:24px;
+	width:200px;
+	border-radius:0px; 
+	background-color:lightgray;
+}
+
+#graph
+{
+    width: 900px;
+}

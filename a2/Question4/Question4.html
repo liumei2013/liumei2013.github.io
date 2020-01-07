@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!-- SOEN287 Assignment 2 -->
+<!-- Question4.html       -->
+<!-- Mei Liu 40060940     -->
+
+<html lang="en">
+
+<head>
+
+<title>SOEN287 Assignment 2 Question 4</title> 
+<meta charset="utf-8"/>
+
+<style type="text/css">
+
+body { font-size: 24px; }
+
+table
+{	
+	border-collapse:collapse; 
+    border-spacing:0;
+}
+
+td {
+    border:3px solid black; 
+    padding: 10px;
+}
+
+input#sentence{
+    font-size: 24px;
+    width: 800px;
+}
+
+input#hidebutton 
+{
+	font-size:24px;
+	width:200px;
+	border-radius:0px; 
+	background-color:lightgray;
+}
+
+</style>
+
+<script type="text/javascript">
+
+function HideMe()
+{
+    var sentence = document.getElementById("sentence");
+    var prompt = document.getElementById("prompt");
+    var modified = document.getElementById("modified");
+    
+    var words = ["soen287", "summer", "19"];
+    var s = sentence.value;
+    var found = false;
+    for (var i = 0; i < words.length; i++)
+    {
+        var w = words[i];
+        var n = s.toLowerCase().indexOf(w);
+        while (n >= 0)
+        {
+            s = s.split('');
+            for (var j = 0; j < w.length; j++)
+                s[n + j] = 'X';
+
+            s = s.join('');
+            found = true;
+            
+            // Find next repeat word from n+1
+            n = s.toLowerCase().indexOf(w, n + 1);
+        }
+    }
+    
+    prompt.innerHTML = ">>";
+    modified.innerHTML = s;
+    if (!found) {
+        modified.style.backgroundColor = "#00FF00";
+    } else {
+        modified.style.backgroundColor = "inherit";
+    }
+}
+      
+</script>
+    
+</head>
+
+<body> 
+
+<form onsubmit="HideMe()">
+<table>
+
+<tr>
+<td>Input Sentence:</td>
+<td><input id="sentence" type="text" value="This is assignment2 for SOeN287 in the summer of 2019."/></td>
+</tr>
+<tr><td colspan="2">
+<input id="hidebutton" type="button" onclick="HideMe()" value="Hide Me"/>
+</td></tr>
+
+</table>
+</form>
+
+<div><span id="prompt"></span><span id="modified"></span></div>
+
+</body>
+
+</html>

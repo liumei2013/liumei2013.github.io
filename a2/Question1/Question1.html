@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!-- SOEN287 Assignment 2 -->
+<!-- Question1.html       -->
+<!-- Mei Liu 40060940     -->
+
+<html lang="en">
+
+<head>
+
+<title>SOEN287 Assignment 2 Question 1</title> 
+<meta charset="utf-8"/>
+
+<style type="text/css">
+
+table
+{ 
+	font-size:32px;
+	margin:300px auto; 
+	text-align: center; 
+	border-collapse:collapse;
+}
+
+input#number 
+{ 
+	font-size:32px;
+	width:300px; 
+}
+
+input#trybtn 
+{
+	font-size:32px;
+	width:100px;
+	border-radius:0px; 
+	background-color:lightgray;
+}
+
+</style>
+
+<script type="text/javascript">
+
+function validateNumber(str)
+{
+	var rex = /^\d+$/;
+	return str.match(rex) != null;
+}
+
+function isPrimeNumber(num)
+{
+	if (num == 1)
+		return false;
+
+	for (i = 2; i <= Math.sqrt(num); i++)
+	{
+		if ((num % i) == 0)
+			return false;
+	}
+	
+	return true;
+}
+
+function reverseNumber(num) 
+{
+	var digit, position = 0;
+ 
+	// If the number has just one digit, that's it
+	if (num < 10)
+      return num;
+
+	// Get the first digit
+   result = num % 10;
+   num = Math.floor(num / 10);
+  
+	// Loop to produce the result for the rest
+   do {
+      digit = num % 10;
+      result = 10 * result + digit;
+      num = Math.floor(num / 10);
+   } while (num >= 1);
+   return result;
+}
+      
+function tryIt()
+{
+    // input is a global variable now
+	input = document.getElementById("number");
+	if (!validateNumber(input.value))
+	{
+		alert("Please enter numeric value");
+		return;
+	}
+	
+	var num = parseInt(input.value);
+	if (!isPrimeNumber(num))
+	{
+		alert("This is not a prime number");
+		return;
+	}
+	
+	var rv = reverseNumber(num);
+	alert("This is a prime number and reverse is " + rv);
+	return false;
+}
+      
+</script>
+    
+</head>
+
+<body> 
+
+<form onsubmit="tryIt()">
+<table>
+<tr>
+	<td id="col1">
+		<input id="number" type="text" placeholder="Enter your number"/>
+	</td>
+	<td id="col2">
+		<input id="trybtn" type="button" value="Try it" onclick="tryIt()"/>
+	</td>	
+</tr>
+</table>
+</form>
+
+</body>
+
+</html>

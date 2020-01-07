@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!-- SOEN287 Assignment 1 -->
+<!-- Question4.html       -->
+<!-- Mei Liu 40060940     -->
+
+<html lang="en">
+
+<head>
+<title>SOEN287 Assignment 1 Question 4</title> 
+<meta charset="utf-8"/>
+
+<style type="text/css">
+
+body 
+{
+	background-color:#FFFACD;
+	font-family:'Times New Roman';
+}
+
+span {font-weight:bold;}
+
+#formtitle { color:#C71585; font-family:'Comic Sans MS',Times; font-size:40px; }
+
+#fieldset1 {background-color:#8470FF; border:4px solid #483D8B;}
+#fieldset1 > legend { color:#483D8B; font-size:22px; }
+
+#fieldset2 {background-color:#90EE90; border:4px solid #006400;}
+#fieldset2 > legend { color:#006400; font-size:22px; }
+
+</style>
+
+</head>
+<body> 
+
+<table>
+<tr>
+<td><a href="https://www.clipartpng.com">
+<img src="https://pics.clipartpng.com/midle/Red_Car_PNG_Clip_Art-2934.png" width="100px"/>
+</a></td>
+<td id="formtitle">Car Dealership</td>
+</tr>
+
+<tr><td colspan="2">
+<form>
+
+	<fieldset id="fieldset1">
+		<legend>Customer Information</legend>
+		<span>Customer Name</span><br/>
+  		<input type="text" placeholder="First Name"/>&nbsp;
+  		<input type="text" placeholder="Last Name"/><br/><br/>
+		<span>Customer Contact</span> <input type="text" placeholder="xxx-xxx-xxxx"/><br/><br/>
+		<span>Email Address</span> <input type="text" placeholder="email address"/><br/><br/>
+	</fieldset>
+	<br/>
+	
+	<fieldset id="fieldset2">
+		<legend>Car Information</legend>
+		<span>Car Type:</span><br/>
+		<label><input type="radio" name="cartype" checked/>Coupe</label><br/>
+		<label><input type="radio" name="cartype"/>Sedan</label><br/>
+		<label><input type="radio" name="cartype"/>SUV</label><br/><br/>
+		
+		<span>Feature:</span><br/>
+		<label><input type="checkbox" name="feature" checked/>Coupe</label><br/>
+		<label><input type="checkbox" name="feature"/>Sedan</label><br/>
+		<label><input type="checkbox" name="feature"/>SUV</label><br/><br/>
+		
+		<span>Price Range:</span><br/>
+  		Minimum Price:<input type="text"/>
+  		Maximum Price:<input type="text"/><br/><br/>
+  		
+  		<span>Car Color:</span><br/>
+  		<input type="color" name="carcolor" value="#000000"/><br/><br/>
+		
+		<span>Approximate Purchase Date:</span><br/>
+		<input type="date" name="purchasedate"/>
+		
+	</fieldset>
+
+	<br/>Request a list of cars with quotes.<br/><br/>
+
+	<input type="submit" value="Search" />
+	<input type="reset" value="Start over" />
+
+</form>
+</td></tr>
+
+</table>
+
+</body>
+
+</html>

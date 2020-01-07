@@ -1,0 +1,111 @@
+body 
+{
+	background-image:url('https://snaped.fns.usda.gov/sites/default/files/styles/crop_ratio_7_5/public/seasonal-produce/2018-05/grapefruit.jpg');
+	font-family: 'Times New Roman';
+}
+
+#all
+{
+	width: 600px;
+	margin-top: 100px;
+	margin-left: 40px;
+}
+
+#header 
+{
+	color: white;
+	background-color: lightgray; 
+	padding: 15px;
+	font-family:'Comic Sans MS',Times; 
+	font-size:60px;
+	border: 10px solid blue; 
+}
+
+table#food 
+{
+	width: 100%;
+	margin-top: 40px;
+	font-size: 25px;
+	border-style: solid double dashed dotted; 
+	border-width: 10px;
+	border-color: green;
+}
+
+th
+{ 
+	background-color:#F4A460;
+	padding: 15px;
+	text-align:center;
+}
+
+th#col1 { width: 200px; }
+
+td#cell1 
+{ 
+	background-color:#98FB98; 
+	border: 3px solid blue;
+	padding-left: 10px;
+}
+
+td#cell1 > ol
+{
+	list-style-type: upper-roman;
+}
+
+td#cell2 
+{ 
+	background-color:#F5DEB3;
+	border: 3px solid red;
+}
+
+td#cell3 
+{ 
+	background-color:#A52A2A;
+	border: 3px solid #DA70D6;
+	padding-left: 10px; 
+}
+
+td#cell3 > ol
+{
+	list-style-type: upper-roman;
+}
+	
+td#cell4 
+{ 
+	background-color:#228B22;
+	border: 3px solid lightyellow; 
+}
+
+#ul_eur
+{
+	list-style-image: url('eur.png');
+}
+
+#ul_mid
+{
+	color:red;
+}
+
+#cell4ol 
+{	
+	list-style-type: lower-greek;
+}
+
+#ul_jpn 
+{
+	color: lightyellow;
+	list-style-type: disc;
+}
+
+#ul_chn
+{
+	list-style-image: url('drink.png');
+}
+
+#all > a
+{
+	margin-top: 40px;
+	font-size: 30px;
+	background-color:lightyellow;
+	border: 3px solid green;
+}
